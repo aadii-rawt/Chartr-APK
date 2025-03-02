@@ -32,6 +32,9 @@ export default function RootLayout() {
       <Stack>
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Screen name="+not-found" />
+        <Stack.Screen name='singlePass' options={{headerShown : false}} />
+        <Stack.Screen name='buyPass' options={{headerShown : false}} />
+        <Stack.Screen name='passDetails' options={{headerShown : false}} />
       </Stack>
       <StatusBar style="auto" />
     </ThemeProvider>

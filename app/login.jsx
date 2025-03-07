@@ -28,14 +28,6 @@ const Login = () => {
             const user = userCredential.user;
             setUser(user)
             router.push('/')
-
-            // // const userDoc = await getDoc(doc(db, "users", user.uid));
-            // if (userDoc.exists()) {
-            //     setUser(userDoc.data())
-            // } else {
-            //     console.log("No user data found.");
-            // }
-            // alert("Success", "Logged in successfully!");
         } catch (error) {
             console.log("Login Failed", error.message);
         }

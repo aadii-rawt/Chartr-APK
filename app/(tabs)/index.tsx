@@ -1,12 +1,15 @@
 import { View, Text, TextInput, TouchableOpacity, Image, ScrollView, StyleSheet } from 'react-native';
-import React from 'react';
+import React, { useContext } from 'react';
 import { FontAwesome, MaterialIcons, MaterialCommunityIcons } from '@expo/vector-icons';
 import Tickets from "../components/Tickets";
 import Pass from "../components/Pass";
 import { useNavigation } from 'expo-router';
 import { SafeAreaView } from "react-native-safe-area-context";
+import { UserContext } from '@/context/UserContext';
 export default function HomeScreen() {
   const navigation = useNavigation()
+     const { user } = useContext(UserContext)
+     console.log(user);
  
   return (
     <SafeAreaView style={styles.safeContainer}>

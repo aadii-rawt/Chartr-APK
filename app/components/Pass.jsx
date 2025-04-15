@@ -61,33 +61,11 @@ const Pass = () => {
 
             <TouchableOpacity onPress={() => navigation.navigate("singlePass")} style={{ borderRadius: 10, overflow: "hidden", position: "relative", marginVertical: 10, borderWidth: 0.5, borderColor: "#31363F" }}>
                 <View style={{ backgroundColor: "#D84040", padding: 14, paddingVertical: 10, display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between" }}>
-                    <Text style={{ color: 'white', fontSize: 14, paddingVertical: 0 }}>{formatPassDate(passData?.createdAt) || "N/A"}</Text>
+                    <Text style={{ color: 'white', fontSize: 14, paddingVertical: 0 }}>{passData?.createdAt || "N/A"}</Text>
                     <Text style={{ color: 'white', fontSize: 15, paddingVertical: 0, }}>₹50.0</Text>
                 </View>
                 <View style={{ backgroundColor: "#1B1B1B", padding: 14, paddingVertical: 8, display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between", postion: "relative" }}>
-                    <Text style={{ color: 'white', fontSize: 14, paddingVertical: 0 }}>Valid till:  {formatPassDate(passData?.validTill) || "N/A"} </Text>
-
-
-                    {/* Centered "INVALID" Text */}
-                    {/* <Text
-                    style={{
-                        position: "absolute",
-                        top: "50%",
-                        left: "50%",
-                        transform: [{ translateX: -70 }, { translateY: -40 }, { rotate: "-10deg" }],
-                        color: "#FE4040",
-                        fontWeight: "bold",
-                        fontSize: 25,
-                        borderWidth: 3,
-                        // transform : "rotate(20px)",
-                        borderColor: "#FE4040",
-                        paddingHorizontal: 10,
-                        paddingVertical: 5,
-                        opacity: 0.9,
-                    }}
-                >
-                    INVALID
-                </Text> */}
+                    <Text style={{ color: 'white', fontSize: 14, paddingVertical: 0 }}>Valid till:  {passData?.validTill || "N/A"} </Text>
                 </View>
 
 

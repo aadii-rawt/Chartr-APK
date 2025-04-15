@@ -47,7 +47,7 @@ const Tickets = () => {
                         transform: [{ translateX: -70 }, { translateY: -30 }, { rotate: "-10deg" }],
                         color: "#FE4040",
                         fontWeight: "bold",
-                        fontSize: 30,
+                        fontSize: 40,
                         borderWidth: 3,
                         // transform : "rotate(20px)",
                         borderColor: "#FE4040",

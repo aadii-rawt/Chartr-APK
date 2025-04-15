@@ -5,6 +5,7 @@ import { Link } from "expo-router";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { getFirestore, doc, getDoc } from "firebase/firestore";
 import { UserContext } from "../context/UserContext";
+// import QR from '../assets/images/qrcode.jpg'
 
 // Initialize Firestore
 const db = getFirestore();
@@ -13,6 +14,7 @@ const Singlepass = () => {
     const { user } = useContext(UserContext); // Get current authenticated user
     const [passData, setPassData] = useState(null);
     const [loading, setLoading] = useState(true);
+    const [showQR, setShowQR] = useState(false)
 
     useEffect(() => {
         const fetchPassData = async () => {
@@ -22,10 +24,10 @@ const Singlepass = () => {
                 const userRef = doc(db, "/pass/JlXZOZgOV3eFndP7VCNMu0uZECJ2");
                 const docSnap = await getDoc(userRef);
                 if (docSnap.exists()) {
-                    
+
                     const data = docSnap.data();
                     if (data.pass.length > 0) {
-                        console.log( "data :", data.pass);
+                        console.log("data :", data.pass);
                         setPassData(data.pass[data.pass.length - 1]); // Get latest pass
                     }
                 } else {
@@ -52,7 +54,7 @@ const Singlepass = () => {
     return (
         <SafeAreaView style={styles.safeContainer}>
             <View style={{ backgroundColor: "#D84040", height: "100%", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                <View style={{ backgroundColor: "#1B1B1B", padding: 14, minWidth: "90%", borderRadius: 8 }}>
+                {!showQR ? <View style={{ backgroundColor: "#1B1B1B", padding: 14, minWidth: "90%", borderRadius: 8 }}>
                     <Text style={{ color: "white", fontSize: 20, fontWeight: "500", textAlign: "center" }}>Transport Dept. of Delhi</Text>
 
                     <View style={{ ...styles.flex, paddingVertical: 13 }}>
@@ -87,7 +89,7 @@ const Singlepass = () => {
 
                     <Text style={{ color: "gray", fontSize: 15, textAlign: "center", paddingVertical: 8 }}>DL15022025ruhfr6kdae</Text>
 
-                    <TouchableOpacity style={{ backgroundColor: "#D84040", padding: 5, display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center", gap: 5 }}>
+                    <TouchableOpacity onPress={() => setShowQR(!showQR)} style={{ backgroundColor: "#D84040", padding: 5, display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center", gap: 5 }}>
                         <MaterialIcons name="qr-code-2" size={28} color="white" />
                         <Text style={{ color: "white", textAlign: "center", fontSize: 15 }}>Show QR Code</Text>
                     </TouchableOpacity>
@@ -102,7 +104,18 @@ const Singlepass = () => {
                             resizeMode="contain"
                         />
                     </View>
-                </View>
+                </View> :
+                    <View style={{ backgroundColor: "#1B1B1B", padding: 0, minWidth: "90%", borderRadius: 8 }}>
+                        <TouchableOpacity onPress={() => setShowQR(!showQR)}>
+                            <Image
+                                source={require("../assets/images/qrcode.png")}
+                                style={{ width: 350, height: 350 }}
+                                resizeMode="contain"
+                            />
+
+                        </TouchableOpacity>
+                    </View>
+                }
 
                 <View style={{ ...styles.flex, width: "95%", position: "absolute", top: 15 }}>
                     <Link href="">

@@ -55,6 +55,7 @@ export default function PassDetails() {
                 await setDoc(userRef, existingData);
             }
 
+            navigation.navigate("singlePass");
             // navigation.navigate("Home"); // Navigate to home after submission
         } catch (error) {
             console.log("Error", "Could not store pass: " + error.message);

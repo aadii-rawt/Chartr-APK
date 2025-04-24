@@ -6,34 +6,34 @@ const Tickets = () => {
     return (
         <View style={{ margin: 13, borderRadius: 10, padding: 5 }}>
             <View style={{ display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between" }}>
-                <Text style={{ color: 'white', fontSize: 18, fontWeight: 500, paddingVertical: 10 }}>Tickets</Text>
+                <Text style={{ color: 'black', fontSize: 18, fontWeight: 500, paddingVertical: 10 }}>Tickets</Text>
                 <Text style={{ color: 'white', fontSize: 15, paddingVertical: 10, color: "gray" }}>View all tickets</Text>
             </View>
 
             {/* bus ticket */}
 
-            <View style={{ borderRadius: 10, overflow: "hidden", position: "relative",width : "100%", borderWidth : 0.5, borderColor : "#31363F" }}>
+            <View style={{ borderRadius: 10, overflow: "hidden", position: "relative",width : "100%", borderWidth : 0.5,elevation : 2, shadowColor : "#000" }}>
                 <View style={{ backgroundColor: "#2E81EB", height: 8 }}></View>
-                <View style={{ backgroundColor: "#1B1B1B", padding: 14 }}>
+                <View style={{ backgroundColor: "#F4F6FF", padding: 14 }}>
                     <View style={{ display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between" }}>
                         <View style={{ display: "flex", flexDirection: "row", gap: 10 }}>
                             <View style={{ backgroundColor: "#2E81EB", borderRadius: 50, width: 40, height: 40, display: "flex", alignItems: "center", justifyContent: "center" }}>
                                 <MaterialIcons name="directions-bus" size={24} color="white" />
                             </View>
                             <View>
-                                <Text style={{ color: "white", fontSize: 16, fontWeight: "500" }}>427</Text>
-                                <Text style={{ color: "gray" }}>DL1PD5048</Text>
+                                <Text style={{ color: "black", fontSize: 16, fontWeight: "500" }}>427</Text>
+                                <Text style={{ color: "#2C2C2C" }}>DL1PD5048</Text>
                             </View>
                         </View>
                         <Text style={{ color: "white", backgroundColor: "green", paddingHorizontal: 8, paddingVertical: 5, borderRadius: 20 }}>Success</Text>
                     </View>
 
-                    <Text style={{ fontSize: 16, color: "gray", paddingVertical: 16, borderBottomWidth: 1, borderBottomColor: "gray" }}>
+                    <Text style={{ fontSize: 16, color: "g#2C2C2Cray", paddingVertical: 16, borderBottomWidth: 1, borderBottomColor: "#2C2C2C" }}>
                         Pushpa Bhawan - Nehru Place Terminal
                     </Text>
 
                     <View style={{ display: "flex", alignItems: "center", justifyContent: "space-between", flexDirection: "row" }}>
-                        <Text style={{ fontSize: 13, color: "gray", paddingVertical: 16 }}>5 Mar, 25 | 08:00 AM</Text>
+                        <Text style={{ fontSize: 13, color: "#2C2C2C", paddingVertical: 16 }}>5 Mar, 25 | 08:00 AM</Text>
                         <Text style={{ fontSize: 15, fontWeight: "500", color: "white" }}>₹15.0 x 1 = ₹13.75</Text>
                     </View>
                 </View>

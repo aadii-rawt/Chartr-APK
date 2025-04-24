@@ -37,7 +37,6 @@ export default function PassDetails() {
             createdAt: formattedCreatedAt,
             validTill: formattedValidTill
         };
-
         try {
             const userRef = doc(db, "/pass/JlXZOZgOV3eFndP7VCNMu0uZECJ2");
 

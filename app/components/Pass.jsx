@@ -54,7 +54,7 @@ const Pass = () => {
     return (
         <View style={{ marginHorizontal: 13, marginVertical: 0, borderRadius: 10, padding: 5, marginBottom: 20 }}>
             <View style={{ display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between" }}>
-                <Text style={{ color: 'white', fontSize: 18, fontWeight: 500, paddingVertical: 0 }}>Pass</Text>
+                <Text style={{ color: 'black', fontSize: 18, fontWeight: 500, paddingVertical: 0 }}>Pass</Text>
                 <Text style={{ color: 'white', fontSize: 15, paddingVertical: 0, color: "gray" }}>View pass</Text>
             </View>
 
@@ -67,8 +67,6 @@ const Pass = () => {
                 <View style={{ backgroundColor: "#1B1B1B", padding: 14, paddingVertical: 8, display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between", postion: "relative" }}>
                     <Text style={{ color: 'white', fontSize: 14, paddingVertical: 0 }}>Valid till:  {passData?.validTill || "N/A"} </Text>
                 </View>
-
-
             </TouchableOpacity>
 
         </View>

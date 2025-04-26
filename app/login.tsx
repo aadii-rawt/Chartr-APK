@@ -17,7 +17,7 @@ const Login = () => {
     const router = useRouter();
     const handleLogin = async () => {
         if (!email || !password) {
-            alert("Error", "Please enter email and password.");
+            alert("Error Please enter email and password.");
             return;
         }
         setLoading(true);
@@ -28,7 +28,7 @@ const Login = () => {
             const user = userCredential.user;
             setUser(user)
             router.push('/')
-        } catch (error) {
+        } catch (error : any) {
             console.log("Login Failed", error.message);
         }
         setLoading(false);

@@ -56,7 +56,7 @@ export default function PassDetails() {
 
             navigation.navigate("singlePass");
             // navigation.navigate("Home"); // Navigate to home after submission
-        } catch (error) {
+        } catch (error : any) {
             console.log("Error", "Could not store pass: " + error.message);
         }
     };
@@ -133,7 +133,7 @@ export default function PassDetails() {
                     {/* Payment Section */}
                     <View style={{ backgroundColor: "#111", width: "100%", padding: 15, marginTop: 15 }}>
                         <View style={styles.paymentContainer}>
-                            <View style={styles.paymentDetails}>
+                            <View>
                                 <Text style={styles.amountLabel}>Amount payable</Text>
                                 <Text style={styles.amountValue}>₹50.0</Text>
                             </View>

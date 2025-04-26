@@ -113,6 +113,7 @@ export default function HomeScreen() {
               </TouchableOpacity>
             </View>
           </View>
+          
           <Tickets />
           <Pass />
 

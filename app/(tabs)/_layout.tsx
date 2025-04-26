@@ -15,37 +15,46 @@ export default function TabLayout() {
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
+        tabBarActiveTintColor: 'black', // Changed to black for light theme
         headerShown: false,
         tabBarButton: HapticTab,
-        tabBarBackground: TabBarBackground,
+        tabBarBackground: TabBarBackground, // Make sure this is light in your component
         tabBarStyle: Platform.select({
           ios: {
-            // Use a transparent background on iOS to show the blur effect
             position: 'absolute',
+            backgroundColor: 'white', // White background for light theme
           },
-          default: {},
+          default: {
+            backgroundColor: 'white', // White background for light theme
+          },
         }),
-      }}>
+      }}
+    >
       <Tabs.Screen
         name="index"
         options={{
           title: 'Home',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
+          tabBarIcon: ({ color }) => (
+            <IconSymbol size={28} name="house.fill" color={color} />
+          ),
         }}
       />
       <Tabs.Screen
         name="explore"
         options={{
           title: 'Nearby',
-          tabBarIcon: ({ color }) => <MaterialIcons name="location-on" size={28} color="white" />,
+          tabBarIcon: ({ color }) => (
+            <MaterialIcons name="location-on" size={28} color={color} />
+          ),
         }}
       />
       <Tabs.Screen
         name="aroundme"
         options={{
           title: 'Around Me',
-          tabBarIcon: ({ color }) => <MaterialIcons name="location-on" size={28} color="white" />,
+          tabBarIcon: ({ color }) => (
+            <MaterialIcons name="location-on" size={28} color={color} />
+          ),
         }}
       />
     </Tabs>

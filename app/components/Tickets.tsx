@@ -11,7 +11,6 @@ const Tickets = () => {
             </View>
 
             {/* bus ticket */}
-
             <View style={{backgroundColor : "#C2FFC7",borderRadius: 10,  overflow: "hidden", position: "relative", width: "100%", elevation: 2, shadowColor: "#000" }}>
 
                 <View style={{backgroundColor : "white",padding : 10,borderWidth: 0.2,borderRadius: 10,borderColor : "#242424d9"  }}>

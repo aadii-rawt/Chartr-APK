@@ -11,19 +11,19 @@ const Tickets = () => {
             </View>
 
             {/* bus ticket */}
-            <View style={{backgroundColor : "#C2FFC7",borderRadius: 10,  overflow: "hidden", position: "relative", width: "100%", elevation: 2, shadowColor: "#000" }}>
+            <View style={{backgroundColor : "#76e0a3a8",borderRadius: 10,  overflow: "hidden", position: "relative", width: "100%", elevation: 2, shadowColor: "#000" }}>
 
-                <View style={{backgroundColor : "white",padding : 10,borderWidth: 0.2,borderRadius: 10,borderColor : "#242424d9"  }}>
+                <View style={{backgroundColor : "#FBFBFB",padding : 15,borderWidth: 0,borderRadius: 10,borderColor : "#242424d9"  }}>
                     <View style={styles.ticketHeader}>
                         <View style={{ display: "flex", flexDirection: "row", columnGap: 10, }}>
-                            <View style={{borderWidth: 0.1, padding: 3, borderRadius:5}}>
+                            <View style={{borderWidth: 0.1, padding: 5, borderRadius:5}}>
                                 <Text>DL51EV9602</Text>
                             </View>
-                            <View style={{borderWidth: 0.1, padding: 3, borderRadius:5,backgroundColor:"#C2FFC7"}}>
+                            <View style={{borderWidth: 0.1, padding: 5, borderRadius:5,backgroundColor:"#76e0a3a8"}}>
                                 <Text>Success</Text>
                             </View>
                         </View>
-                        <View ><Text style={{fontSize : 16,fontWeight : 500}}>22.75</Text></View>
+                        <View ><Text style={{fontSize : 17,fontWeight : 500}}>₹22.75</Text></View>
                     </View>
                     <View style={{ display: "flex", flexDirection: "row", columnGap: 5, paddingVertical : 10}}>
                         <View>
@@ -31,23 +31,20 @@ const Tickets = () => {
                         </View>
                     </View>
                     <View style={{display : "flex", flexDirection : "row", columnGap: 5,}}>
-                            <View style={{borderWidth: 0.1, padding: 3, borderRadius:5}}>
+                            <View style={{borderWidth: 0.1, padding: 5, borderRadius:5}}>
                                 <Text>DTC</Text>
                             </View>
-                            <View style={{ padding: 3, borderRadius:5,backgroundColor : "orange",}}>
+                            <View style={{ padding: 5, borderRadius:5,backgroundColor : "orange",}}>
                                 <Text style={{color : "white"}}>General</Text>
                             </View>
-                            <View style={{ padding: 3, borderRadius:5,backgroundColor : "green",}}>
+                            <View style={{ padding: 5, borderRadius:5,backgroundColor : "green",}}>
                                 <Text style={{color : "white"}}>Expired</Text>
-                            </View>
-                            <View style={{borderWidth: 0.1, padding: 3, borderRadius:5,}}>
-                                <Text>1</Text>
                             </View>
                         </View>
                 </View>
 
 
-                <View style={{backgroundColor : "#C2FFC7" ,padding : 5}}>
+                <View style={{backgroundColor : "#76e0a3a8" ,padding : 5}}>
                    <Text style={{textAlign : "center"}}>Click on this ticket to view.</Text> 
                 </View>
 

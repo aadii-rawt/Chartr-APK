@@ -51,7 +51,7 @@ export default function TabLayout() {
       <Tabs.Screen
         name="aroundme"
         options={{
-          title: 'Around Me',
+          title: 'Help',
           tabBarIcon: ({ color }) => (
             <MaterialIcons name="location-on" size={28} color={color} />
           ),

@@ -27,8 +27,8 @@ export default function HomeScreen() {
               style={{ width: 100, height: 20, }}
               resizeMode="contain"
             />
-            <TouchableOpacity>
-              <MaterialCommunityIcons name="account-circle" size={32} color="white" />
+            <TouchableOpacity onPress={() => navigation.navigate("profile")}>
+              <MaterialCommunityIcons name="account-circle" size={32} color="black" />
             </TouchableOpacity>
           </View>
 
@@ -42,7 +42,7 @@ export default function HomeScreen() {
             <View style={{ backgroundColor: '#E6E6E6', borderRadius: 25, flexDirection: 'row', alignItems: 'center', paddingVertical: 5, marginTop: 5, paddingHorizontal: 20, marginBottom: 10 }}>
               <FontAwesome name="search" size={16} color="black" style={{ marginRight: 10 }} />
               <TextInput
-                style={{ fontSize: 16, color: "white", outline: "none", }}
+                style={{ fontSize: 16, color: "#000", outline: "none", }}
                 placeholder="Where do you want to go?"
                 placeholderTextColor="#000"
               />
@@ -55,18 +55,21 @@ export default function HomeScreen() {
           <View style={{ backgroundColor: "#F4F6FF", margin: 13, borderRadius: 10, padding: 5, paddingTop: 10, elevation: 2, shadowColor: "black" }}>
             {/*========================================== Options ========================================== */}
             <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginBottom: 10, padding: 5 }}>
-              <TouchableOpacity onPress={() => navigation.navigate("buyPass")} style={{ alignItems: 'center' }}>
+              <TouchableOpacity onPress={() => navigation.navigate("buyTicket")} style={{ alignItems: 'center' }}>
                 <View style={{ backgroundColor: "#E0F4FF", padding: 15, borderRadius: 6 }}>
                   <MaterialCommunityIcons name="ticket" size={45} color="black" />
                 </View>
                 <Text style={{ color: 'black', fontSize: 16, textAlign: 'center', marginTop: 8 }}>Bus {"\n"} Ticket</Text>
               </TouchableOpacity>
             
-              <TouchableOpacity style={{ alignItems: 'center' }}>
+              <TouchableOpacity onPress={() => navigation.navigate("dailyPass")} style={{ alignItems: 'center' }}>
                 <View style={{ backgroundColor: "#E0F4FF", padding: 15, borderRadius: 6 }}>
                   <MaterialIcons name="directions-train" size={45} color="black" />
                 </View>
                 <Text style={{ color: 'black', fontSize: 16, textAlign: 'center', marginTop: 8 }}>Metro {"\n"} Ticket</Text>
+                <View style={{ backgroundColor: "red", paddingHorizontal: "4px", position: "absolute", top: -10, borderRadius : 6}}>
+                <Text style={{ color: 'white', fontSize: 15, textAlign: 'center',  paddingVertical: 3}}>New</Text>
+                </View>
               </TouchableOpacity>
 
               <TouchableOpacity onPress={() => navigation.navigate("buyPass")} style={{ alignItems: 'center', position: "relative" }}>
@@ -76,13 +79,15 @@ export default function HomeScreen() {
                 <Text style={{ color: 'black', fontSize: 16, textAlign: 'center', marginTop: 8 }}>Daily {"\n"} Pass</Text>
               </TouchableOpacity>
 
-              <TouchableOpacity style={{ alignItems: 'center' }}>
+              <TouchableOpacity style={{ alignItems: 'center' ,position : "relative"}}>
                 <View style={{ backgroundColor: "#E0F4FF", padding: 15, borderRadius: 6 }}>
                   <MaterialIcons name="layers" size={45} color="black" />
                 </View>
                 <Text style={{ color: 'black', fontSize: 16, marginTop: 8,textAlign : "center" }}>Monthly {"\n"} Pass</Text>
-                
-                <Text style={{ color: 'white', fontSize: 15, textAlign: 'center', backgroundColor: "red", paddingHorizontal: "4px", position: "absolute", top: -10, }}>1-Tap</Text>
+
+                <View style={{ backgroundColor: "red", paddingHorizontal: "4px", position: "absolute", top: -10, borderRadius : 6}}>
+                <Text style={{ color: 'white', fontSize: 15, textAlign: 'center',  paddingVertical: 3}}>New</Text>
+                </View>
               </TouchableOpacity>
             </View>
           </View>
@@ -91,7 +96,7 @@ export default function HomeScreen() {
           <View style={{  marginHorizontal: 13,  }}>
             <View style={{ flexDirection: 'row', justifyContent: 'space-between', padding: 5 }}>
              
-              <TouchableOpacity onPress={() => navigation.navigate("buyPass")} style={{ alignItems: 'center', position: "relative",width : "50%", }}>
+              <TouchableOpacity  style={{ alignItems: 'center', position: "relative",width : "50%", }}>
                 <View style={{ backgroundColor: "#3564AC",width : "100%",display : "flex",flexDirection : "row",alignItems: "center", justifyContent : "center", padding: 15, borderRadius: 6, columnGap: 10 }}>
                   <MaterialCommunityIcons name="card-account-details" size={35} color="white" />
                   <Text style={{color : "#FFB22C",fontSize : 17}}>Activate</Text>
@@ -119,16 +124,16 @@ export default function HomeScreen() {
 
 
             {/* ========================================== Near Me Section ========================================== */}
-            <View style={{ marginTop: 10, marginHorizontal: 13, }}>
+            <View style={{ marginVertical: 10, marginHorizontal: 13, }}>
             <View>
               <View style={{ display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between" }}>
-                <Text style={{ color: 'black', fontSize: 18, fontWeight: 500, paddingVertical: 10 }}>Near Me</Text>
-                <Text style={{ color: 'white', fontSize: 15, textDecorationLine: "underline", paddingVertical: 10 }}>Show all</Text>
+                <Text style={{ color: 'black', fontSize: 18, fontWeight: 500, paddingVertical: 10 }}>Nearest Stop</Text>
+                <Text style={{ color: 'black', fontSize: 15, textDecorationLine: "underline", paddingVertical: 10 }}>Show all</Text>
               </View>
             </View>
-            <View style={{ backgroundColor: '#1A1A1A', borderRadius: 10, padding: 10, marginTop: 10, flexDirection: 'row', alignItems: 'center' }}>
-              <MaterialIcons name="bus-alert" size={24} color="white" style={{ marginRight: 10 }} />
-              <Text style={{ color: 'white', fontSize: 16 }}>Fetching...</Text>
+            <View style={{ backgroundColor: 'gray', borderRadius: 10, padding: 10, marginTop: 10, flexDirection: 'row', alignItems: 'center' }}>
+              <MaterialIcons name="bus-alert" size={24} color="black" style={{ marginRight: 10 }} />
+              <Text style={{ color: 'black', fontSize: 16 }}>Fetching...</Text>
             </View>
           </View>
 

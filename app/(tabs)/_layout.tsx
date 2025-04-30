@@ -49,7 +49,7 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="aroundme"
+        name="help"
         options={{
           title: 'Help',
           tabBarIcon: ({ color }) => (

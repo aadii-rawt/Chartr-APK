@@ -47,21 +47,18 @@ export default TabThreeScreen;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f4f8fb',
+    backgroundColor: '#fff',
     padding: 15,
   },
   card: {
+    width :" 100%",
+    height : "100%",
     backgroundColor: '#fff',
-    borderRadius: 5,
-    padding: 15,
-    elevation: 3,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 1 },
-    shadowOpacity: 0.2,
-    shadowRadius: 2,
+    // padding: 15,
+    position : "relative"
   },
   header: {
-    fontSize: 16,
+    fontSize: 18,
     fontWeight: 'bold',
     marginVertical: 10,
     color: '#000',
@@ -83,7 +80,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   attachTitle: {
-    fontWeight: 'bold',
+    // fontWeight: '',
     color: '#000',
   },
   attachSubtitle: {
@@ -110,6 +107,10 @@ const styles = StyleSheet.create({
     marginRight: 10,
   },
   button: {
+    position : 'absolute',
+    bottom: -50, 
+    left : 0,
+    width : "100%",
     backgroundColor: '#25b7b7',
     padding: 15,
     borderRadius: 5,

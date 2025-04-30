@@ -54,18 +54,44 @@ const Pass = () => {
     return (
         <View style={{ marginHorizontal: 13, marginVertical: 0, borderRadius: 10, padding: 5, marginBottom: 20 }}>
             <View style={{ display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between" }}>
-                <Text style={{ color: 'black', fontSize: 18, fontWeight: 500, paddingVertical: 0 }}>Pass</Text>
-                <Text style={{ color: 'white', fontSize: 15, paddingVertical: 0, color: "gray" }}>View pass</Text>
+                <Text style={{ color: 'black', fontSize: 18, fontWeight: 500, paddingVertical: 0 }}>Bus pass</Text>
+                <Text style={{ color: 'white', fontSize: 15, paddingVertical: 0, color: "gray" }}>View all passes</Text>
             </View>
 
 
             <TouchableOpacity onPress={() => navigation.navigate("singlePass")} style={{ borderRadius: 10, overflow: "hidden", position: "relative", marginVertical: 10, borderWidth: 0.5, borderColor: "#31363F" }}>
-                <View style={{ backgroundColor: "#D84040", padding: 14, paddingVertical: 10, display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between" }}>
+                {/* <View style={{ backgroundColor: "#D84040", padding: 14, paddingVertical: 10, display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between" }}>
                     <Text style={{ color: 'white', fontSize: 14, paddingVertical: 0 }}>{passData?.createdAt || "N/A"}</Text>
                     <Text style={{ color: 'white', fontSize: 15, paddingVertical: 0, }}>₹50.0</Text>
                 </View>
                 <View style={{ backgroundColor: "#1B1B1B", padding: 14, paddingVertical: 8, display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between", postion: "relative" }}>
                     <Text style={{ color: 'white', fontSize: 14, paddingVertical: 0 }}>Valid till:  {passData?.validTill || "N/A"} </Text>
+                </View> */}
+                <View  style={{backgroundColor: "#76e0a3a8"}}>
+                    <View style={{ padding: 15, borderRadius: 10, backgroundColor : "white" }}>
+                        <View style={{ display: "flex", flexDirection: "row", columnGap: 10, }}>
+                            <View style={{ borderWidth: 0.1, padding: 5, borderRadius: 5, backgroundColor: "#76e0a3a8" }}>
+                                <Text>Success</Text>
+                            </View>
+                            <View style={{ borderWidth: 0.1, padding: 5, borderRadius: 5, backgroundColor: "green", }}>
+                                <Text style={{ color: "white" }}>Expired</Text>
+                            </View>
+                        </View>
+
+                        <View style={{ display: "flex", flexDirection: "row", columnGap: 5, marginTop: 15 }}>
+                            <View style={{ borderWidth: 0.1, padding: 5, borderRadius: 5 }}>
+                                <Text>DTC</Text>
+                            </View>
+                            <View style={{ borderWidth: 0.1, padding: 5, borderRadius: 5 }}>
+                                <Text>DAILY ALL ROUTE AC PASS</Text>
+                            </View>
+
+                        </View>
+                    </View>
+
+                    <View style={{ backgroundColor: "#76e0a3a8", padding: 5 }}>
+                        <Text style={{ textAlign: "center" }}>Click on this ticket to view.</Text>
+                    </View>
                 </View>
             </TouchableOpacity>
 

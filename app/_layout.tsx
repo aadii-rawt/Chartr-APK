@@ -37,6 +37,9 @@ export default function RootLayout() {
         <Stack.Screen name='singlePass' options={{headerShown : false}} />
         <Stack.Screen name='buyPass' options={{headerShown : false}} />
         <Stack.Screen name='passDetails' options={{headerShown : false}} />
+        <Stack.Screen name='buyTicket' options={{headerShown : false}} />
+        <Stack.Screen name='dailyPass' options={{headerShown : false}} />
+        <Stack.Screen name='profile' options={{headerShown : false}} />
         <Stack.Screen name='login' options={{headerShown : false}} />
       </Stack>
       <StatusBar style="auto" />

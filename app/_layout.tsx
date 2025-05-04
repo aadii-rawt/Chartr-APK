@@ -8,6 +8,7 @@ import 'react-native-reanimated';
 import { UserProvider } from "../context/UserContext";
 
 import { useColorScheme } from '@/hooks/useColorScheme';
+import "../global.css"
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
@@ -38,7 +39,7 @@ export default function RootLayout() {
         <Stack.Screen name='buyPass' options={{headerShown : false}} />
         <Stack.Screen name='passDetails' options={{headerShown : false}} />
         <Stack.Screen name='buyTicket' options={{headerShown : false}} />
-        <Stack.Screen name='dailyPass' options={{headerShown : false}} />
+        {/* <Stack.Screen name='dailyPass' options={{headerShown : false}} /> */}
         <Stack.Screen name='profile' options={{headerShown : false}} />
         <Stack.Screen name='login' options={{headerShown : false}} />
       </Stack>

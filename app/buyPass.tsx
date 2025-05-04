@@ -16,6 +16,7 @@ export default function DailyPass() {
   const [name, setName] = useState<string>("")
   const [mobile, setMobile] = useState<string>("")
   const [age, setAge] = useState<string>("")
+  const [selectedPass, setSelectedPass] = useState("AC pass - ₹50.0");
     const { user } = useContext(UserContext); // Get current user
 
   const navigation = useNavigation()
@@ -38,6 +39,7 @@ export default function DailyPass() {
       name,
       age,
       mobile,
+      selectedPass,
       createdAt: formattedCreatedAt,
       validTill: formattedValidTill
     };
@@ -59,7 +61,6 @@ export default function DailyPass() {
       }
 
       navigation.navigate("singlePass");
-      // navigation.navigate("Home"); // Navigate to home after submission
     } catch (error: any) {
       console.log("Error", "Could not store pass: " + error.message);
     }

@@ -1,8 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { View, Text, StyleSheet, TouchableOpacity, Modal, Alert, TextInput } from "react-native";
-import { Camera } from "expo-camera";
-// import QRCodeScanner from "react-native-qrcode-scanner";
-// import QRCodeScanner from "react-native-qrcode-scanner";
 import { useNavigation } from "expo-router";
 import { SafeAreaView } from "react-native-safe-area-context";
 
@@ -15,27 +12,7 @@ export default function BuyTicket() {
 
   const navigation = useNavigation()
 
-  // useEffect(() => {
-  //   (async () => {
-  //     const { status } = await Camera.requestCameraPermissionsAsync();
-  //     setHasPermission(status === "granted");
-  //   })();
-  // }, []);
-
-  // const handleQRCodeScanned = (e) => {
-  //   setScanned(true);
-  //   Alert.alert("QR Code Scanned", e.data);
-  //   setBusNumber(e.data);
-  // };
-
-  // if (hasPermission === null) {
-  //   return <Text>Requesting camera permission...</Text>;
-  // }
-  // if (hasPermission === false) {
-  //   return <Text>No access to camera</Text>;
-  // }
-
-  const handleOtpChange = (value, index) => {
+  const handleOtpChange = (value : string, index : number) => {
     const newOtp = [...otp];
     newOtp[index] = value;
     setOtp(newOtp);
@@ -46,8 +23,7 @@ export default function BuyTicket() {
     }
     if (index == 3) {
       setTimeout(() => {
-        navigation.navigate("passDetails")
-
+        // navigation.navigate("passDetails")
       }, 1000);
 
     }
@@ -55,6 +31,9 @@ export default function BuyTicket() {
 
   const otpInputRefs = [];
 
+  useEffect(() => {
+    otpInputRefs[0].focus()
+  },[])
 
   return (
     <SafeAreaView style={styles.safeContainer}>
@@ -62,11 +41,6 @@ export default function BuyTicket() {
         <View style={styles.bottomSheet}>
           <Text style={styles.heading}>Enter Bus Number</Text>
           <View style={styles.buttonRow}>
-            {/* {["DL1PC", "DL1PD", "DL1PB", "DL51GD", "DL51EV"].map((bus, index) => (
-              <TouchableOpacity key={index} style={styles.busButton} onPress={() => setBusNumber(bus)}>
-                <Text style={styles.busText}>{bus.includes("51") ? "⚡" : ""} {bus}</Text>
-              </TouchableOpacity>
-            ))} */}
             <Text style={{fontWeight : 500,fontSize: 18,}}>Enter Bus Number (Last 4 digits)</Text>
             <Text style={{paddingVertical : 10, fontSize : 15, color : "gray"}}>Like 1234 for DL 1PC 1234</Text>
           </View>
@@ -86,7 +60,6 @@ export default function BuyTicket() {
             ))}
           </View>
         </View>
-
       </View>
     </SafeAreaView >
   );

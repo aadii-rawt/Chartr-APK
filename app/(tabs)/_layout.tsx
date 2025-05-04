@@ -40,7 +40,7 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="explore"
+        name="help2"
         options={{
           title: 'Nearby',
           tabBarIcon: ({ color }) => (

@@ -35,8 +35,8 @@ const Login = () => {
     };
 
     return (
-        <View style={{ flex: 1, justifyContent: "center", alignItems: "center", padding: 20, color: "white" }}>
-            <Text style={{ fontSize: 24, fontWeight: "bold", marginBottom: 20, color: "white" }}>Login</Text>
+        <View style={{ flex: 1, justifyContent: "center", alignItems: "center", padding: 20,backgroundColor : "white" }} className="bg-white">
+            <Text style={{ fontSize: 24, fontWeight: "bold", marginBottom: 20, color: "black" }}>Login</Text>
 
             <TextInput
                 placeholder="Enter your email address"
@@ -47,14 +47,13 @@ const Login = () => {
                 style={{
                     width: "100%",
                     padding: 12,
-                    color: "white",
+                    color: "black",
                     borderWidth: 1,
-                    borderColor: "white",
+                    borderColor: "black",
                     borderRadius: 8,
                     marginBottom: 10,
                 }}
             />
-
             <TextInput
                 placeholder="Enter your password"
                 value={password}
@@ -62,10 +61,10 @@ const Login = () => {
                 secureTextEntry
                 style={{
                     width: "100%",
-                    color: 'white',
+                    color: 'black',
                     padding: 12,
                     borderWidth: 1,
-                    borderColor: "white",
+                    borderColor: "black",
                     borderRadius: 8,
                     marginBottom: 10,
                 }}
@@ -84,9 +83,6 @@ const Login = () => {
                 {loading ? <ActivityIndicator color="white" /> : <Text style={{ color: "white", fontSize: 16 }}>Login</Text>}
             </TouchableOpacity>
 
-            {/* <TouchableOpacity onPress={() => navigation.navigate("RegisterScreen")} style={{ marginTop: 15 }}>
-                <Text style={{ color: "#007bff" }}>Don't have an account? Sign up</Text>
-            </TouchableOpacity> */}
         </View>
     );
 };

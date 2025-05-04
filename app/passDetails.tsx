@@ -12,7 +12,7 @@ export default function PassDetails() {
     const [age, setAge] = useState("");
     const [name, setName] = useState("");
     const [mobile, setMobile] = useState("");
-    const [selectedPass, setSelectedPass] = useState("AC pass - ₹50.0");
+    const [selectedPass, setSelectedPass] = useState("₹50.0");
     const navigation = useNavigation();
     const { user } = useContext(UserContext); // Get current user
 
@@ -26,8 +26,8 @@ export default function PassDetails() {
 
         // Get current date and formatted time
         const now = dayjs();
-        const formattedCreatedAt = now.format("DD MM-YYYY HH:mm:ss"); // Example: "03 03-2025 07:40:35"
-        const formattedValidTill = now.endOf("day").format("DD MM-YYYY 23:59:59"); // "03 03-2025 23:59:59"
+        const formattedCreatedAt = now.format("DD MMM, YY | hh:mm A");
+        const formattedValidTill = now.endOf("day").format("DD MMM, YY | hh:mm A");
 
         const passData = {
             name,
@@ -71,7 +71,6 @@ export default function PassDetails() {
                 paddingTop: 20,
                 height: "100%"
             }}>
-                {/* Back Button */}
                 <Link href="" style={styles.backButton}>
                     <MaterialIcons name="arrow-back" size={24} color="white" />
                 </Link>

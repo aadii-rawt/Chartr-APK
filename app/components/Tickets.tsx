@@ -11,9 +11,9 @@ const Tickets = () => {
             </View>
 
             {/* bus ticket */}
-            <View style={{backgroundColor : "#76e0a3a8",borderRadius: 10,  overflow: "hidden", position: "relative", width: "100%", elevation: 2, shadowColor: "#000" }}>
+            <View style={{backgroundColor : "#76e0a3a8",borderRadius: 10,  overflow: "hidden", position: "relative", width: "100%" }} className='border border-black/20 shadow-sm'>
 
-                <View style={{backgroundColor : "#FBFBFB",padding : 15,borderWidth: 0,borderRadius: 10,borderColor : "#242424d9"  }}>
+                <View style={{backgroundColor : "#FBFBFB",padding : 15,borderWidth: 0,borderRadius: 10,  }}>
                     <View style={styles.ticketHeader}>
                         <View style={{ display: "flex", flexDirection: "row", columnGap: 10, }}>
                             <View style={{borderWidth: 0.1, padding: 5, borderRadius:5}}>

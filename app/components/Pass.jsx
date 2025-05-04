@@ -59,7 +59,7 @@ const Pass = () => {
             </View>
 
 
-            <TouchableOpacity onPress={() => navigation.navigate("singlePass")} style={{ borderRadius: 10, overflow: "hidden", position: "relative", marginVertical: 10, borderWidth: 0.5, borderColor: "#31363F" }}>
+            <TouchableOpacity onPress={() => navigation.navigate("singlePass")} style={{ borderRadius: 10, overflow: "hidden", position: "relative", marginVertical: 10, }} className='border border-black/20 shadow-sm'>
                 {/* <View style={{ backgroundColor: "#D84040", padding: 14, paddingVertical: 10, display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between" }}>
                     <Text style={{ color: 'white', fontSize: 14, paddingVertical: 0 }}>{passData?.createdAt || "N/A"}</Text>
                     <Text style={{ color: 'white', fontSize: 15, paddingVertical: 0, }}>₹50.0</Text>

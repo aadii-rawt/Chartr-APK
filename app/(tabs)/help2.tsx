@@ -73,7 +73,7 @@ export default function HomeScreen() {
                 </View>
               </TouchableOpacity>
 
-              <TouchableOpacity onPress={() => navigation.navigate("buyPass")} style={{ alignItems: 'center', position: "relative" }}>
+              <TouchableOpacity onPress={() => navigation.navigate("dailyPass")} style={{ alignItems: 'center', position: "relative" }}>
                 <View style={{ backgroundColor: "#E0F4FF", padding: 15, borderRadius: 6 }}>
                   <MaterialCommunityIcons name="card-account-details" size={45} color="black" />
                 </View>
@@ -132,11 +132,12 @@ export default function HomeScreen() {
                 <Text style={{ color: 'black', fontSize: 15, textDecorationLine: "underline", paddingVertical: 10 }}>Show all</Text>
               </View>
             </View>
-            <View style={{ backgroundColor: '#e5e7eb', borderRadius: 10, padding: 10, marginTop: 10, flexDirection: 'row', alignItems: 'center' }} className='bg-gray-200'>
+            <View style={{ backgroundColor: 'gray', borderRadius: 10, padding: 10, marginTop: 10, flexDirection: 'row', alignItems: 'center' }}>
               <MaterialIcons name="bus-alert" size={24} color="black" style={{ marginRight: 10 }} />
               <Text style={{ color: 'black', fontSize: 16 }}>Fetching...</Text>
             </View>
           </View>
+
         </View>
       </ScrollView>
     </SafeAreaView>

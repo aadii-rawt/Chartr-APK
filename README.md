@@ -1,50 +1,54 @@
-# Welcome to your Chartr APK 👋
+# Welcome to Chartr APK 👋
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## About Chartr APK
 
-## Get started
+Chartr APK is a React Native application that replicates the core functionality of the Chartr app. It allows users to book DTC bus tickets and apply for bus passes directly from their mobile device. The app is designed to provide a smooth and convenient travel booking experience.
 
-1. Install dependencies
+**Note:** A PWA (Progressive Web App) version is also available! 
 
-   ```bash
-   npm install
-   ```
+- **Repository:** [Chartr PWA Repository](https://github.com/aadii-rawt/Chartr)
+- **Live Website:** [Chartr PWA](https://chartr-apk.netlify.app/)
+
+## Installation
+
+1. Clone the repository
+
+```bash
+git clone https://github.com/aadii-rawt/Chartr-APK
+cd Chartr-APK
+```
+
+2. Install dependencies
+
+```bash
+npm install
+```
 
 2. Start the app
 
-   ```bash
-    npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
 ```bash
-npm run reset-project
+npx expo start
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+In the output, you'll find options to open the app in:
+- Development build
+- Android emulator
+- iOS simulator
+- Expo Go
 
-## Learn more
+You can start developing by editing the files inside the **app** directory. This project uses file-based routing.
 
-To learn more about developing your project with Expo, look at the following resources:
+## Preview
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+### Screenshots
 
-## Join the community
+<img width="404" height="639" alt="image" src="https://github.com/user-attachments/assets/b2d4ddcc-914e-41ad-b238-1916e9d19ff8" />
 
-Join our community of developers creating universal apps.
+<img width="404" height="639" alt="image" src="https://github.com/user-attachments/assets/56245744-47a8-414a-a6a7-7757e72e67f9" />
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+<img width="404" height="639" alt="image" src="https://github.com/user-attachments/assets/948b6980-28e8-4b53-bf58-ff694f895bd0" />
+
+<img width="404" height="639" alt="image" src="https://github.com/user-attachments/assets/d86f041e-8eae-4bc8-b2c9-1672ba55061b" />
+
+<img width="404" height="639" alt="image" src="https://github.com/user-attachments/assets/63a4d8b6-ddb5-4aab-b551-dbb9d1a171d1" />
+

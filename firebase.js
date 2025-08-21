@@ -7,12 +7,12 @@ import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyD7NTZxDlAOVlKWRpX68KzwqVfJONNsHrw",
-  authDomain: "chartr-apk.firebaseapp.com",
-  projectId: "chartr-apk",
-  storageBucket: "chartr-apk.firebasestorage.app",
-  messagingSenderId: "378777297169",
-  appId: "1:378777297169:web:7095b13a825cbe76ff2cb0",
+  apiKey: FIREBASE_API_KEY,
+  authDomain: FIREBASE_AUTH_DOMAIN,
+  projectId: FIREBASE_PROJECT_ID,
+  storageBucket: FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: FIREBASE_MESSAGING_SENDER_ID,
+  appId: FIREBASE_APP_ID,
 };
 
 // Initialize Firebase
